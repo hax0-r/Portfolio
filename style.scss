@@ -798,7 +798,7 @@ nav {
 // ===========page3 end==========
 
 .pg4 {
-    padding: 5rem 0;
+    padding: 8rem 0;
     position: relative;
 
     .R {
@@ -917,10 +917,10 @@ nav {
     }
 }
 
-
 @include media(992px) {
 
     .pg4 {
+        padding: 5rem 0;
 
         .R {
             top: 15rem;

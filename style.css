@@ -557,7 +557,7 @@ nav {
   }
 }
 .pg4 {
-  padding: 5rem 0;
+  padding: 8rem 0;
   position: relative;
 }
 .pg4 .R {
@@ -660,6 +660,9 @@ nav {
 }
 
 @media screen and (max-width: 992px) {
+  .pg4 {
+    padding: 5rem 0;
+  }
   .pg4 .R {
     top: 15rem;
     width: 15rem;
