@@ -719,7 +719,7 @@ nav {
 .pg5 {
   background: url(./imgs/pg5Bg.png) center;
   background-size: cover;
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 .pg5 .container .pg5-main {
   display: flex;
@@ -768,8 +768,19 @@ nav {
   }
 }
 @media screen and (max-width: 550px) {
+  .pg5 .container .pg5-main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
   .pg5 .container .pg5-main img {
     height: 13rem;
+  }
+  .pg5 .container .pg5-main .left {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
   .pg5 .container .pg5-main .left h2 {
     font-size: 1.8rem;
@@ -790,4 +801,42 @@ nav {
   .pg5 .container .pg5-main .left h2 {
     font-size: 1.2rem;
   }
+}
+.pg6 {
+  padding: 3rem 0;
+}
+.pg6 .pg6-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.pg6 .pg6-main h1 {
+  text-transform: capitalize;
+  font-size: 2.8rem;
+  color: var(--black-color);
+  font-weight: 700;
+}
+.pg6 .pg6-main p {
+  max-width: 40rem;
+  width: 100%;
+  color: var(--gray);
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .pg6 {
+    padding: 3rem 0;
+  }
+  .pg6 .pg6-main h1 {
+    font-size: 2rem;
+  }
+}
+.d-img {
+  max-width: 50rem;
+}
+.d-img img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
