@@ -24,6 +24,7 @@
     --white-color: #FFF;
     --black-color: #192138;
     --Pink: #FF1DA3;
+    --gray: #636A81;
 }
 
 header {
@@ -194,9 +195,7 @@ nav {
                 transition: 200ms ease;
 
                 &:hover {
-                    font-weight: 800;
-                    background-color: transparent;
-                    color: var(--Pink);
+                    opacity: .85;
                 }
             }
 
@@ -275,6 +274,7 @@ nav {
 
     .page1 {
         height: unset;
+
         .info {
             h1 {
                 font-size: 3.8rem;
@@ -479,6 +479,32 @@ nav {
 
 // ------Page1 End--------
 
+.pagetwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .left-img {
+        width: 100%;
+        position: absolute;
+        z-index: -11;
+        filter: blur(5px);
+        bottom: 12rem;
+        margin-left: -5rem;
+
+        img {
+            max-width: 15rem;
+            width: 100%;
+        }
+    }
+}
 
 .page2-main {
     padding-top: 5rem;
@@ -513,7 +539,7 @@ nav {
             position: relative;
 
             img {
-                max-width: 50rem;
+                max-width: 40rem;
                 width: 100%;
                 border-radius: 1.2rem;
             }
@@ -613,15 +639,20 @@ nav {
 @include media(500px) {
 
     .page2-main {
+        padding-top: 3rem;
 
         .info {
 
             .left {
                 margin-right: unset;
+                position: absolute;
+
+                img {
+                    max-width: 29.7rem;
+                }
             }
 
             .right {
-                position: absolute;
 
                 img {
                     max-width: 50rem;
@@ -635,7 +666,7 @@ nav {
                 }
 
                 .skill-img {
-                    z-index: 1;
+                    z-index: -1;
                     right: 2rem;
                     bottom: 2rem;
                     left: unset;
@@ -647,13 +678,26 @@ nav {
                 }
             }
         }
+
+        .head {
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+
+    .page2 {
+
+        .left-img {
+            bottom: 20rem;
+            filter: blur(9px);
+        }
     }
 }
 
 @include media(400px) {
 
     .page2-main {
-
         .info {
             .right {
                 .skills {
@@ -669,6 +713,212 @@ nav {
                         width: 100%;
                     }
                 }
+            }
+        }
+    }
+}
+
+// ============page2 end=======
+
+.page3 {
+    background: url(./imgs/pg3BgColor.png) center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    z-index: -1;
+
+    .pg3-img {
+        position: absolute;
+
+        img {}
+    }
+
+    .ph3-c {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 5rem 2rem;
+
+        .pg3-main {
+            max-width: 60rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+
+            .head {
+
+                h1 {
+                    text-transform: capitalize;
+                    font-size: 3.5rem;
+                    color: var(--white-color);
+                    font-weight: 700;
+                }
+
+                p {
+                    color: var(--white-color);
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    opacity: .7;
+                }
+            }
+
+            p {
+                color: var(--white-color);
+                font-size: 1rem;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+@include media(500px) {
+    .page3 {
+        .ph3-c {
+            .pg3-main {
+                .head {
+                    h1 {
+                        font-size: 2.5rem;
+                    }
+
+                    p {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ===========page3 end==========
+
+.pg4 {
+    padding: 4rem 0;
+    position: relative;
+    .R{
+        right: 0;
+        bottom: 0;
+    }
+    .L{
+        left: 0;
+        bottom: 0;
+    }
+    .pg4img{
+        position: absolute;
+        max-width: 15rem;
+        z-index: -1;
+        img{
+            width: 100%;
+        }
+    }
+    .pg4-main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        .left {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 25rem;
+            width: 100%;
+            text-align: right;
+            align-items: end;
+
+            h1 {
+                text-transform: capitalize;
+                font-size: 3rem;
+                color: var(--black-color);
+                font-weight: 700;
+            }
+
+            p {
+                color: var(--gray);
+                font-size: 1rem;
+                font-weight: 500;
+                text-transform: capitalize;
+            }
+
+            button {
+                color: var(--white-color);
+                width: 12.6rem;
+                height: 2.5rem;
+                border-radius: 20px;
+                background: var(--Pink);
+                border: 2px solid var(--Pink);
+                font-weight: 500;
+                transition: 200ms ease;
+                &:hover {
+                    background-color: transparent;
+                    color:var(--Pink);
+                    opacity: .85;
+                font-weight:bold;
+                }
+            }
+        }
+        .right {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 25rem;
+            width: 100%;
+
+            h1 {
+                text-transform: capitalize;
+                font-size: 3rem;
+                color: var(--black-color);
+                font-weight: 700;
+            }
+
+            p {
+                color: var(--gray);
+                font-size: 1rem;
+                font-weight: 500;
+                text-transform: capitalize;
+            }
+
+            button {
+                color: var(--Pink);
+                width: 12.6rem;
+                height: 2.5rem;
+                border-radius: 20px;
+                background: transparent;
+                border: none;
+                font-weight: 500;
+                border: 2px solid  var(--Pink);
+                transition: 200ms ease;
+                &:hover {
+                    background-color: var(--Pink);
+                    color: var(--white-color);
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .hr {
+            height: 15rem;
+            width: .1rem;
+            background-color: rgba(128, 128, 128, 0.294);
+        }
+    }
+}
+
+
+@include media(992px) {
+
+    .pg4 {
+        .pg4-main {
+            .left {
+                text-align: unset;
+                align-items: unset;
+                padding-bottom: 2rem;
+            }
+            .hr {
+                display: none;
             }
         }
     }

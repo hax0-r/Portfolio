@@ -15,7 +15,6 @@ function toggleNavMid() {
       bar.style.display = 'none';
     }
   }
-  
   window.addEventListener('load', toggleNavMid);
   window.addEventListener('resize', toggleNavMid);
 
@@ -45,3 +44,6 @@ adjustBrTags();
 
 // Add an event listener to adjustBrTags when the window is resized
 window.addEventListener('resize', adjustBrTags);
+
+// =================remove br Tag===============
+
