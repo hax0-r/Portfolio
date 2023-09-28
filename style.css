@@ -556,7 +556,7 @@ nav {
   }
 }
 .pg4 {
-  padding: 4rem 0;
+  padding: 5rem 0;
   position: relative;
 }
 .pg4 .R {
@@ -569,7 +569,7 @@ nav {
 }
 .pg4 .pg4img {
   position: absolute;
-  max-width: 15rem;
+  width: 17%;
   z-index: -1;
 }
 .pg4 .pg4img img {
@@ -660,6 +660,23 @@ nav {
 }
 
 @media screen and (max-width: 992px) {
+  .pg4 .R {
+    right: 0;
+    bottom: unset;
+    top: 15rem;
+  }
+  .pg4 .L {
+    left: 0;
+    bottom: 5rem;
+  }
+  .pg4 .pg4img {
+    position: absolute;
+    width: 17%;
+    z-index: -1;
+  }
+  .pg4 .pg4img img {
+    width: 100%;
+  }
   .pg4 .pg4-main .left {
     text-align: unset;
     align-items: unset;

@@ -797,29 +797,35 @@ nav {
 // ===========page3 end==========
 
 .pg4 {
-    padding: 4rem 0;
+    padding: 5rem 0;
     position: relative;
-    .R{
+
+    .R {
         right: 0;
         bottom: 0;
     }
-    .L{
+
+    .L {
         left: 0;
         bottom: 0;
     }
-    .pg4img{
+
+    .pg4img {
         position: absolute;
-        max-width: 15rem;
+        width: 17%;
         z-index: -1;
-        img{
+
+        img {
             width: 100%;
         }
     }
+
     .pg4-main {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
+
         .left {
             display: flex;
             flex-direction: column;
@@ -852,14 +858,16 @@ nav {
                 border: 2px solid var(--Pink);
                 font-weight: 500;
                 transition: 200ms ease;
+
                 &:hover {
                     background-color: transparent;
-                    color:var(--Pink);
+                    color: var(--Pink);
                     opacity: .85;
-                font-weight:bold;
+                    font-weight: bold;
                 }
             }
         }
+
         .right {
             display: flex;
             flex-direction: column;
@@ -889,8 +897,9 @@ nav {
                 background: transparent;
                 border: none;
                 font-weight: 500;
-                border: 2px solid  var(--Pink);
+                border: 2px solid var(--Pink);
                 transition: 200ms ease;
+
                 &:hover {
                     background-color: var(--Pink);
                     color: var(--white-color);
@@ -911,12 +920,34 @@ nav {
 @include media(992px) {
 
     .pg4 {
+
+        .R {
+            right: 0;
+            bottom: unset;
+            top: 15rem;
+        }
+
+        .L {
+            left: 0;
+            bottom: 5rem;
+        }
+
+        .pg4img {
+            position: absolute;
+            width: 17%;
+            z-index: -1;
+
+            img {
+                width: 100%;
+            }
+        }
         .pg4-main {
             .left {
                 text-align: unset;
                 align-items: unset;
                 padding-bottom: 2rem;
             }
+
             .hr {
                 display: none;
             }
