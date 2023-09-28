@@ -25,7 +25,6 @@
 header {
   background: url(./imgs/hero\ bg\ 1.png) center;
   background-size: cover;
-  height: 100vh;
   overflow: hidden;
   z-index: 1;
   position: relative;
@@ -402,62 +401,67 @@ nav {
 }
 
 @media screen and (max-width: 992px) {
-  .page2-main {
-    padding-top: 5rem;
-  }
-  .page2-main .info {
-    display: flex;
-    align-items: center;
-    margin: 2rem 0;
-  }
   .page2-main .info .left {
-    margin-right: -10rem;
-    z-index: 1;
+    margin-right: -7rem;
   }
-  .page2-main .info .left img {
-    max-width: 40rem;
-    width: 100%;
-    background-color: rgb(0, 0, 0);
-    border-radius: 1.2rem;
+  .page2-main .info .right img {
+    height: 40rem;
+  }
+  .page2-main .info .right .skills {
+    left: 8rem;
+  }
+  .page2-main .info .right .skill-img img {
+    height: 7rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .page2-main .info {
+    align-items: unset;
   }
   .page2-main .info .right {
     position: relative;
   }
+  .page2-main .info .right .skills {
+    top: 8rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .page2-main .info .left {
+    margin-right: unset;
+  }
+  .page2-main .info .right {
+    position: absolute;
+  }
   .page2-main .info .right img {
     max-width: 50rem;
+    height: 50rem;
     width: 100%;
-    border-radius: 1.2rem;
   }
   .page2-main .info .right .skills {
-    position: absolute;
-    top: 5rem;
-    left: 13rem;
-  }
-  .page2-main .info .right .skills ul {
-    list-style: none;
-  }
-  .page2-main .info .right .skills ul li {
-    margin: 1rem 0;
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-transform: capitalize;
-  }
-  .page2-main .info .right .skills ul li h5 {
-    font-size: 0.8rem;
-    color: var(--black-color);
-    opacity: 0.7;
-  }
-  .page2-main .info .right .skills ul li:first-child {
-    color: var(--Pink);
-    font-weight: bold;
+    top: 20rem;
+    left: 3rem;
   }
   .page2-main .info .right .skill-img {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+    z-index: 1;
+    right: 2rem;
+    bottom: 2rem;
+    left: unset;
+    top: unset;
+  }
+  .page2-main .info .right .skill-img img {
+    height: 10rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .page2-main .info .right .skills {
+    top: 15rem;
+  }
+  .page2-main .info .right .skill-img {
     z-index: -1;
   }
   .page2-main .info .right .skill-img img {
-    height: 12rem;
+    max-width: 8rem;
+    height: unset;
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */

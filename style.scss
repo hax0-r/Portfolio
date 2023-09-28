@@ -29,7 +29,7 @@
 header {
     background: url(./imgs/hero\ bg\ 1.png) center;
     background-size: cover;
-    height: 100vh;
+    // height: 100vh;
     overflow: hidden;
     z-index: 1;
     position: relative;
@@ -563,71 +563,109 @@ nav {
 @include media(992px) {
 
     .page2-main {
-        padding-top: 5rem;
 
         .info {
-            display: flex;
-            align-items: center;
-            margin: 2rem 0;
 
             .left {
-                margin-right: -10rem;
-                z-index: 1;
+                margin-right: -7rem;
+            }
+
+            .right {
 
                 img {
-                    max-width: 40rem;
-                    width: 100%;
-                    background-color: rgb(0, 0, 0);
-                    border-radius: 1.2rem;
+                    height: 40rem;
+                }
+
+                .skills {
+                    left: 8rem;
+                }
+
+                .skill-img {
+
+                    img {
+                        height: 7rem;
+                    }
                 }
             }
+        }
+    }
+}
+
+@include media(768px) {
+
+    .page2-main {
+
+        .info {
+            align-items: unset;
 
             .right {
                 position: relative;
 
+                .skills {
+                    top: 8rem;
+                }
+            }
+        }
+    }
+}
+
+@include media(500px) {
+
+    .page2-main {
+
+        .info {
+
+            .left {
+                margin-right: unset;
+            }
+
+            .right {
+                position: absolute;
+
                 img {
                     max-width: 50rem;
+                    height: 50rem;
                     width: 100%;
-                    border-radius: 1.2rem;
                 }
 
                 .skills {
-                    position: absolute;
-                    top: 5rem;
-                    left: 13rem;
-
-                    ul {
-                        list-style: none;
-
-                        li {
-                            margin: 1rem 0;
-                            font-size: 1.2rem;
-                            font-weight: 500;
-                            text-transform: capitalize;
-
-                            h5 {
-                                font-size: .8rem;
-                                color: var(--black-color);
-                                opacity: .7;
-                            }
-                        }
-                    }
+                    top: 20rem;
+                    left: 3rem;
                 }
-
-                .skills ul li:first-child {
-                    color: var(--Pink);
-                    font-weight: bold;
-                }
-
 
                 .skill-img {
-                    position: absolute;
-                    top: 1rem;
-                    right: 1rem;
+                    z-index: 1;
+                    right: 2rem;
+                    bottom: 2rem;
+                    left: unset;
+                    top: unset;
+
+                    img {
+                        height: 10rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media(400px) {
+
+    .page2-main {
+
+        .info {
+            .right {
+                .skills {
+                    top: 15rem;
+                }
+
+                .skill-img {
                     z-index: -1;
 
                     img {
-                        height: 12rem;
+                        max-width: 8rem;
+                        height: unset;
+                        width: 100%;
                     }
                 }
             }
