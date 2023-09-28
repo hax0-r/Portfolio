@@ -25,6 +25,7 @@
     --black-color: #192138;
     --Pink: #FF1DA3;
     --gray: #636A81;
+    --purple: #8010E4;
 }
 
 header {
@@ -802,17 +803,19 @@ nav {
 
     .R {
         right: 0;
+        width: 17%;
         bottom: 0;
     }
 
     .L {
         left: 0;
         bottom: 0;
+        width: 17%;
+
     }
 
     .pg4img {
         position: absolute;
-        width: 17%;
         z-index: -1;
 
         img {
@@ -836,7 +839,6 @@ nav {
             align-items: end;
 
             h1 {
-                text-transform: capitalize;
                 font-size: 3rem;
                 color: var(--black-color);
                 font-weight: 700;
@@ -876,7 +878,6 @@ nav {
             width: 100%;
 
             h1 {
-                text-transform: capitalize;
                 font-size: 3rem;
                 color: var(--black-color);
                 font-weight: 700;
@@ -922,25 +923,16 @@ nav {
     .pg4 {
 
         .R {
-            right: 0;
-            bottom: unset;
             top: 15rem;
+            width: 15rem;
+
         }
 
         .L {
-            left: 0;
+            width: 15rem;
             bottom: 5rem;
         }
 
-        .pg4img {
-            position: absolute;
-            width: 17%;
-            z-index: -1;
-
-            img {
-                width: 100%;
-            }
-        }
         .pg4-main {
             .left {
                 text-align: unset;
@@ -950,6 +942,205 @@ nav {
 
             .hr {
                 display: none;
+            }
+        }
+    }
+}
+
+@include media(768px) {
+
+    .pg4 {
+
+        .R {
+            top: 17rem;
+            width: 17rem;
+
+        }
+
+        .L {
+            width: 10rem;
+        }
+    }
+}
+
+@include media(600px) {
+
+    .pg4 {
+
+        .R {
+            width: 13rem;
+
+        }
+
+        .L {
+            filter: blur(4px);
+
+        }
+    }
+}
+
+@include media(430px) {
+
+    .pg4 {
+
+        .R {
+            width: 10rem;
+
+        }
+
+        .L {
+            left: 0;
+            bottom: 0rem;
+            filter: blur(7px);
+
+        }
+    }
+}
+
+@include media(330px) {
+
+    .pg4 {
+
+        .R {
+            width: 8rem;
+            filter: blur(4px);
+
+        }
+
+        .L {
+            filter: blur(7px);
+
+        }
+    }
+}
+
+// ========pg5=========
+
+.pg5 {
+    background: url(./imgs/pg5Bg.png) center;
+    background-size: cover;
+    padding: 1rem 0;
+
+    .container {
+        .pg5-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                height: 25rem;
+            }
+
+            .left {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+
+                h2 {
+                    color: var(--white-color);
+                    font-size: 3rem;
+                    font-weight: 700;
+                }
+
+                button {
+                    width: 12.6rem;
+                    height: 2.7rem;
+                    border-radius: 20px;
+                    border: none;
+                    font-weight: 500;
+                    transition: 200ms ease;
+                    color: var(--white-color);
+                    box-shadow: 0px 24px 44px -10px rgba(0, 0, 0, 0.35);
+                    background: linear-gradient(59deg, #8010E4 30.59%, #FF1DA3 100%);
+
+                    &:hover {
+                        opacity: .85;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media(992px) {
+    .pg5 {
+        .container {
+            .pg5-main {
+                img {
+                    height: 20rem;
+                }
+            }
+        }
+    }
+}
+
+@include media(768px) {
+    .pg5 {
+        .container {
+            .pg5-main {
+                img {
+                    height: 17rem;
+                }
+
+                .left {
+                    h2 {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media(550px) {
+    .pg5 {
+        .container {
+            .pg5-main {
+                img {
+                    height: 13rem;
+                }
+
+                .left {
+                    h2 {
+                        font-size: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media(430px) {
+    .pg5 {
+        .container {
+            .pg5-main {
+                img {
+                    height: 10rem;
+                }
+
+                .left {
+                    h2 {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media(350px) {
+    .pg5 {
+        .container {
+            .pg5-main {
+                img {
+                    height: 8rem;
+                }
+
+                .left {
+                    h2 {
+                        font-size: 1.2rem;
+                    }
+                }
             }
         }
     }
